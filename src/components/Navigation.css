@@ -1,0 +1,27 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin-top: 1%;
+}
+
+.nav-bar h1 {
+  font-size: 1.6rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  align-self: flex-end;
+  height: 100%;
+  margin-top: 0%;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1.2rem;
+}

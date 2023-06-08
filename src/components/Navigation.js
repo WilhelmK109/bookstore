@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import 'Navigation.css';
+import './Navigation.css';
 
 export default function Navigation() {
   return (
@@ -11,5 +11,5 @@ export default function Navigation() {
         <li><Link to="/categories">Categories</Link></li>
       </ul>
     </nav>
-  )
+  );
 }
