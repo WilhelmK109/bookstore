@@ -1,0 +1,26 @@
+.books-list {
+  list-style: none;
+}
+
+.book-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-info span {
+  margin-left: 50px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #000;
+  border-radius: 1px;
+}
+
+form input {
+  margin-right: 5px;
+  padding: 8px;
+}
