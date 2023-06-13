@@ -1,12 +1,11 @@
 import { Provider } from 'react-redux';
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import store from "./redux/store";
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import store from './redux/store';
 
-import BookList from "./components/BookList";
-import Navigation from "./components/Navigation";
-import CategoriesPage from "./components/Categories";
-import { Provider } from "react-redux";
+import BookList from './components/BookList';
+import Navigation from './components/Navigation';
+import CategoriesPage from './components/Categories';
 
 function App() {
   return (
