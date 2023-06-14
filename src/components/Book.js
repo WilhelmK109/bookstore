@@ -9,7 +9,7 @@ function Book({ book }) {
         <p>{book.title}</p>
         <span>{book.author}</span>
       </div>
-      < RemoveBookButton bookId={book.id} />
+      <RemoveBookButton bookId={book.id} />
     </li>
   );
 }

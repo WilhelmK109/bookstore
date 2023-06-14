@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import propTypes from 'prop-types';
 import { addBook } from '../redux/books/booksSlice';
 
-export default function AddBookButton({ title, author}) {
+export default function AddBookButton({ title, author }) {
   const dispatch = useDispatch();
 
   const handleAddBook = (event) => {

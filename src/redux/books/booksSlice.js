@@ -33,8 +33,8 @@ export const booksSlice = createSlice({
     removeBook: (state, action) => {
       const bookIndex = state.books.findIndex((book) => book.id === action.payload.id);
       state.books.splice(bookIndex, 1);
-    }
-  }
+    },
+  },
 });
 
 export const { addBook, removeBook } = booksSlice.actions;

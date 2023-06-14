@@ -9,7 +9,7 @@ export default function BookList() {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
 
-  const books = useSelector((state) => state.books);
+  const books = useSelector((state) => state.books.books);
   const dispatch = useDispatch();
 
   const handleTitleChange = (event) => {
@@ -26,6 +26,7 @@ export default function BookList() {
     setTitle('');
     setAuthor('');
   };
+
   return (
     <div>
       <ul className="books-list">
