@@ -1,19 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import RemoveBookButton from './RemoveBookButton';
 
-function Book({ bookInfo }) {
+function Book({ book }) {
   return (
     <li>
       <div className="book-info">
-        <p>{bookInfo.title}</p>
-        <span>{bookInfo.author}</span>
+        <p>{book.title}</p>
+        <span>{book.author}</span>
       </div>
+      <RemoveBookButton bookId={book.id} />
     </li>
   );
 }
 
 Book.propTypes = {
-  bookInfo: PropTypes.shape({
+  book: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
   }).isRequired,
