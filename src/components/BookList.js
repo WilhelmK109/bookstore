@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Book from './Book';
 import '../App.css';
-import './BookList.css';
 import { fetchBooks } from '../redux/books/booksSlice';
 import AddBookButton from './AddBookButton';
 
