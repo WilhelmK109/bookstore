@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Book from './Book';
+import '../App.css';
 import './BookList.css';
 import { fetchBooks } from '../redux/books/booksSlice';
 import AddBookButton from './AddBookButton';
@@ -20,8 +21,8 @@ export default function BookList() {
   }
 
   return (
-    <div>
-      <ul className="books-list">
+    <div className="book-list-container">
+      <ul className="books-list d-flex">
         {books.map((book) => (
           <Book key={book.item_id} book={book} />
         ))}

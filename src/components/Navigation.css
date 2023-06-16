@@ -1,27 +1,61 @@
-.nav-bar {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.d-flex {
   display: flex;
-  justify-content: space-around;
-  width: 80%;
-  margin-top: 1%;
 }
 
-.nav-bar h1 {
-  font-size: 1.6rem;
+.nav-bar {
+  padding: 24px 4%;
+  background-color: var(--white-white);
+  border-bottom: 1px solid var(--white);
+  align-items: center;
+  grid-gap: 40px;
+  gap: 40px;
+}
+
+.nav-brand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--azure);
+  text-decoration: none;
 }
 
 .nav-list {
-  list-style: none;
-  display: flex;
+  list-style-type: none;
   align-items: center;
-  gap: 10px;
-  font-size: 1.5rem;
-  align-self: flex-end;
-  height: 100%;
-  margin-top: 0%;
+  grid-gap: 40px;
+  gap: 40px;
+  flex-grow: 1;
 }
 
 .nav-list li a {
   text-decoration: none;
   margin-right: 20px;
   font-size: 1.2rem;
+}
+
+.activeLink {
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.icon-button {
+  cursor: pointer;
+  width: 2.813rem;
+  height: 2.813rem;
+  border-radius: 50%;
+  border: 1px solid  #e8e8e8;
+  background-color: #fff;
+}
+
+.material-icons {
+  font-size: 25px;
 }
