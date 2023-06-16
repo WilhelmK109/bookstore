@@ -18,7 +18,7 @@ export default function BookList() {
       <p>Loading...</p>
     );
   }
-  
+
   return (
     <div>
       <ul className="books-list">

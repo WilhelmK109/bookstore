@@ -7,7 +7,7 @@ const initialState = {
   error: null,
 };
 
-const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/';
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/SERz0T6MOlfncfi0umcc/books';
 
 export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
   try {
@@ -32,7 +32,7 @@ export const deleteBook = createAsyncThunk('books/deleteBook', async (bookId) =>
     if (!bookId) {
       throw new Error('Invalid book ID');
     }
-    const response = await axios.delete(`${url}/${book}`);
+    const response = await axios.delete(`${url}/${bookId}`);
     return response.data;
   } catch (error) {
     return error;
@@ -69,22 +69,23 @@ export const booksSlice = createSlice({
         return ({
           ...state,
           books: newBookList,
-          status: 'loading'
+          status: 'loading',
         });
       })
-      .addCase(createBook.pending, (state) => ({ ...state, status: 'loading', error: 'null'}))
+      .addCase(createBook.pending, (state) => ({ ...state, status: 'loading', error: 'null' }))
       .addCase(createBook.fulfilled, (state, action) => ({ ...state, status: 'succeeded', books: [...state.books, action.payload] }))
       .addCase(createBook.rejected, (state, action) => ({ ...state, status: 'failed', error: action.payload }))
-      .addCase(deleteBook.pending, (state) => ({ ...state, status: 'loading', error: 'null'}))
+      .addCase(deleteBook.pending, (state) => ({ ...state, status: 'loading', error: 'null' }))
       .addCase(deleteBook.fulfilled, (state, action) => {
         const bookId = action.payload;
         return {
-          ...state, status: 'succeeded',
+          ...state,
+          status: 'succeeded',
           books: state.books.filter((book) => book.id !== bookId),
         };
       })
-      .addCase(deleteBook.rejected, (state, action) => ({ ...state, status: 'failed', error: action.payload }))
-  }, 
+      .addCase(deleteBook.rejected, (state, action) => ({ ...state, status: 'failed', error: action.payload }));
+  },
 });
 
 export const { addBook, removeBook } = booksSlice.actions;
